@@ -1,11 +1,8 @@
 ﻿import UnityEngine.UI;
 
-var score : Text;
+
 function Updata() {
-
-	score.text = "Score : ";
+	var score : Text = GetComponent.<Text>();
+	score.text = "Score : " + 1000;
 }
 
-function OnRestart() {
-	Application.LoadLevel("Main");
-}

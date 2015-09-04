@@ -7,8 +7,6 @@ function Start () {
 }
 
 function OnTriggerEnter(col : Collider) {
-	// if (col.gameObject.tag == "Ball") {
-		goal = true;
-		Application.LoadLevel("GameClear");
-	// }
+	goal = true;
+	Application.LoadLevel("GameClear");
 }

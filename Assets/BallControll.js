@@ -10,6 +10,7 @@ function Update () {
 	transform.position += Vector3(0, 0, vertMove * 0.1);
 
 	if (transform.position.y < -10) {
-		Application.LoadLevel("GameOver");
+		transform.position = Vector3(0,1,0);
+		// Application.LoadLevel("GameOver");
 	}
 }

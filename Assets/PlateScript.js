@@ -1,6 +1,9 @@
 #pragma strict
 
-var enemy : Transform;
+var normalPlate : Transform;
+var goalPlate : Transform;
+var goalPall : Transform;
+var style : GUIStyle;
 var i : int;
 var k : int;
 var z : int;
@@ -11,13 +14,18 @@ function Update () {
 			i++;
 			// 素数だったら
 			if (checkPrime(i)) {
-				Instantiate(enemy, Vector3(5 * (k - 1), 0, 5 * z), transform.rotation);
+				Instantiate(normalPlate, Vector3(5 * (k - 1), 0, 5 * z), transform.rotation);
 				z++;
 			} else {
-				Instantiate(enemy, Vector3(5 * k, 0, 5 * z), transform.rotation);
+				Instantiate(normalPlate, Vector3(5 * k, 0, 5 * z), transform.rotation);
 				k++;
 			}
 		}
+	}
+	if (i == 20) {
+		Instantiate(goalPlate, Vector3(5 * k, 0, 5 * z), transform.rotation);
+		Instantiate(goalPall, Vector3(5 * k, 0, 5 * z), transform.rotation);
+		i++;
 	}
 }
 

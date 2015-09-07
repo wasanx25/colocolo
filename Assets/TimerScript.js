@@ -2,12 +2,17 @@
 
 import UnityEngine.UI;
 
-public static var time : float;
+public static var timeScore : float;
+public static var test : float;
+
+function Start() {
+	test = 10000;
+}
 
 function Update () {
 	if (!GoalScript.goal) {
-		time += Time.deltaTime;
+		timeScore += Time.deltaTime;
 		var uiText : Text = GetComponent.<Text>();
-		uiText.text = "Time : " + time;
+		uiText.text = "Time : " + timeScore;
 	}
 }

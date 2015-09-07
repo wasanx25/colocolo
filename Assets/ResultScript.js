@@ -1,8 +1,8 @@
 ﻿import UnityEngine.UI;
 
 
-function Updata() {
+function Update() {
 	var score : Text = GetComponent.<Text>();
-	score.text = "Score : " + 1000;
+	score.text = "Score : " + TimerScript.timeScore;
 }
 

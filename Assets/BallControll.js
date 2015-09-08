@@ -12,6 +12,5 @@ function Update () {
 	// 下に落ちたらスタート地点に戻る
 	if (transform.position.y < -10) {
 		transform.position = Vector3(0,1,0);
-		// Application.LoadLevel("GameOver");
 	}
 }

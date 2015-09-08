@@ -3,6 +3,8 @@
 var normalPlate : Transform;
 var goalPlate : Transform;
 var goalPall : Transform;
+var randomPall : Transform;
+
 var style : GUIStyle;
 var i : int;
 var k : int;
@@ -15,9 +17,13 @@ function Update () {
 			// 素数だったら
 			if (checkPrime(i)) {
 				Instantiate(normalPlate, Vector3(5 * (k - 1), 0, 5 * z), transform.rotation);
+				Instantiate(randomPall, Vector3(5 * (k - 1) * Random.Range(0.9, 1), 0.5, 5 * z * Random.Range(0.9, 1)), transform.rotation);
+				Instantiate(randomPall, Vector3(5 * (k - 1) * Random.Range(0.9, 1), 0.5, 5 * z * Random.Range(0.9, 1)), transform.rotation);
 				z++;
 			} else {
 				Instantiate(normalPlate, Vector3(5 * k, 0, 5 * z), transform.rotation);
+				Instantiate(randomPall, Vector3(5 * k * Random.Range(0.9, 1), 0.5, 5 * z * Random.Range(0.9, 1)), transform.rotation);
+				Instantiate(randomPall, Vector3(5 * k * Random.Range(0.9, 1), 0.5, 5 * z * Random.Range(0.9, 1)), transform.rotation);
 				k++;
 			}
 		}

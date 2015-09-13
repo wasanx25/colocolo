@@ -23,8 +23,10 @@ function Update () {
 					z++;
 				} else {
 					Instantiate(normalPlate, Vector3(5 * k, 0, 5 * z), transform.rotation);
-					Instantiate(randomPall, Vector3(5 * k * Random.Range(0.9, 1), 0.5, 5 * z * Random.Range(0.9, 1)), transform.rotation);
-					Instantiate(randomPall, Vector3(5 * k * Random.Range(0.9, 1), 0.5, 5 * z * Random.Range(0.9, 1)), transform.rotation);
+					if (i > 1) {
+						Instantiate(randomPall, Vector3(5 * k * Random.Range(0.9, 1), 0.5, 5 * z * Random.Range(0.9, 1)), transform.rotation);
+						Instantiate(randomPall, Vector3(5 * k * Random.Range(0.9, 1), 0.5, 5 * z * Random.Range(0.9, 1)), transform.rotation);
+					}
 					k++;
 				}
 			}
